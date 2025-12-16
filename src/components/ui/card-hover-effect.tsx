@@ -14,25 +14,47 @@ export const HoverEffect = ({
     link: string;
     image: string;
     animationData: any;
+<<<<<<< HEAD
+=======
+    icon?: React.ElementType; // Add this line
+>>>>>>> ec3cdb5 (Initial commit with website changes)
   }[];
   className?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
+<<<<<<< HEAD
     <div className={cn('flex flex-col sm:flex-row sm:w-3/4 sm:h-3/4 h-full w-full', className)}>
       {items.map(({ title, description, link, animationData }, idx) => (
         <Link
           to={link}
           key={link}
           className="relative group block p-2 h-full w-full sm:w-1/2"
+=======
+    <div
+      className={cn(
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10 justify-items-center",
+        className
+      )}
+    >
+      {items.map(({ title, description, link, animationData, icon }, idx) => (
+        <Link
+          to={link}
+          key={link}
+          className="relative group block p-2 h-full w-full"
+>>>>>>> ec3cdb5 (Initial commit with website changes)
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
+<<<<<<< HEAD
                 className="absolute inset-0 md:h-full w-full mx-4 bg-orange-200 dark:bg-orange-800/[0.8] md: block rounded-3xl"
+=======
+                className="absolute inset-0 md:h-full w-full mx-4 bg-accent/20 dark:bg-accent/[0.8] md: block rounded-3xl"
+>>>>>>> ec3cdb5 (Initial commit with website changes)
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -50,7 +72,11 @@ export const HoverEffect = ({
           {/* Original Card for large screens */}
           <div className="hidden sm:block">
             <Card className="flex flex-row md:flex-col items-center md:h-full w-full mx-4 ">
+<<<<<<< HEAD
               <CardTitle className="text-lg text-orange-500">{title}</CardTitle>
+=======
+              <CardTitle className="text-lg text-accent" icon={icon}>{title}</CardTitle>
+>>>>>>> ec3cdb5 (Initial commit with website changes)
               <div className="flex flex-row md:flex-col items-center w-3/4 md:w-full">
                 <CardDescription className='text-[1rem] md:w-full'>{description}</CardDescription>
                 <CardImageAnimation className="md:w-full w-1/4" animationData={animationData} />
@@ -89,7 +115,11 @@ export const CompactCard = ({
   return (
     <div className="p-2 bg-black text-white shadow rounded flex flex-col items-center mx-0 my-0 justify-between w-full h-full">
       <div className="flex flex-col text-center flex-grow">
+<<<<<<< HEAD
         <h4 className="text-sm font-bold mb-2 text-orange-500 text-center">{title}</h4>
+=======
+        <h4 className="text-sm font-bold mb-2 text-accent text-center">{title}</h4>
+>>>>>>> ec3cdb5 (Initial commit with website changes)
         <p className="text-xs">{description}</p>
       </div>
       <Lottie options={animationOptions} height={100} width={100} />
@@ -107,7 +137,11 @@ export const Card = ({
   return (
     <div
       className={cn(
+<<<<<<< HEAD
         'flex flex-col md:flex-row rounded-2xl h-full w-3/4 p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20',
+=======
+        'flex flex-col md:flex-row rounded-2xl h-full w-3/4 p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 shadow-xl shadow-accent/50 transition-all duration-300 group-hover:shadow-accent/50',
+>>>>>>> ec3cdb5 (Initial commit with website changes)
         className
       )}
       style={{ flex: 1 }}
@@ -122,11 +156,24 @@ export const Card = ({
 export const CardTitle = ({
   className,
   children,
+<<<<<<< HEAD
 }: {
   className?: string;
   children: React.ReactNode;
 }) => {
   return <h4 className={cn('text-zinc-100 font-bold tracking-wide mt-4', className)}>{children}</h4>;
+=======
+  icon: Icon,
+}: {
+  className?: string;
+  children: React.ReactNode;
+  icon?: React.ElementType;
+}) => {
+  return <h4 className={cn('text-zinc-100 font-bold tracking-wide mt-4 flex items-center', className)}>
+    {Icon && <Icon className="mr-2 h-5 w-5" />}
+    {children}
+  </h4>;
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 };
 
 export const CardDescription = ({

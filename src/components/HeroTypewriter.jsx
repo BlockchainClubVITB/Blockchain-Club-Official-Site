@@ -11,11 +11,39 @@ export function TypewriterEffectSmoothDemo() {
     //   text: "empower",
     // },
     {
+<<<<<<< HEAD
       text: "Decentralise . Connect . Empower",
+=======
+      text: "Decentralise",
+    },
+    {
+      text: ".",
+      className: "text-accent dark:text-accent",
+    },
+    {
+      text: "Connect",
+    },
+    {
+      text: ".",
+      className: "text-accent dark:text-accent",
+    },
+    {
+      text: "Empower",
+    },
+    {
+      text: ".",
+      className: "text-accent dark:text-accent",
+>>>>>>> ec3cdb5 (Initial commit with website changes)
     },
   ];
   return (
     <div className="flex flex-col items-center justify-center h-fit  ">
+<<<<<<< HEAD
+=======
+      <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 font-poppins">
+        Blockchain Club
+      </h1>
+>>>>>>> ec3cdb5 (Initial commit with website changes)
       <TypewriterEffectSmooth words={words} />
     </div>
   );

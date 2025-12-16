@@ -38,14 +38,22 @@ function EventImages() {
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
+<<<<<<< HEAD
             <div className="border-4 border-orange-500 flex items-center justify-center h-full w-full image-inner-container">
+=======
+            <div className="border-4 border-accent flex items-center justify-center h-full w-full image-inner-container">
+>>>>>>> ec3cdb5 (Initial commit with website changes)
               <img
                 src={image}
                 alt={`Event Image ${index + 1}`}
                 className="max-w-full max-h-full object-contain image"
               />
             </div>
+<<<<<<< HEAD
             <div className="absolute bottom-0 left-0 right-0 bg-orange-500 p-1"></div>
+=======
+            <div className="absolute bottom-0 left-0 right-0 bg-accent p-1"></div>
+>>>>>>> ec3cdb5 (Initial commit with website changes)
           </div>
         ))}
       </div>

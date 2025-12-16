@@ -1,5 +1,9 @@
 import { Boxes } from "./ui/background-boxes.tsx";
 import { cn } from "../utils/cn.ts";
+<<<<<<< HEAD
+=======
+import PropTypes from 'prop-types';
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 
 export function BackgroundBoxesDemo({ heading, subheading }) {
   return (
@@ -16,3 +20,11 @@ export function BackgroundBoxesDemo({ heading, subheading }) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+BackgroundBoxesDemo.propTypes = {
+  heading: PropTypes.string.isRequired,
+  subheading: PropTypes.string.isRequired,
+};
+>>>>>>> ec3cdb5 (Initial commit with website changes)

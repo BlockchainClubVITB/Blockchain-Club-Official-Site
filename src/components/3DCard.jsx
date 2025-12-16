@@ -1,8 +1,16 @@
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card.tsx";
+<<<<<<< HEAD
 export function ThreeDCardDemo({ name, position, image }) {
   return (
     <CardContainer className="inter-var w-3/4">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+=======
+import PropTypes from 'prop-types';
+export function ThreeDCardDemo({ name, position, image }) {
+  return (
+    <CardContainer className="inter-var w-3/4">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-neutral-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+>>>>>>> ec3cdb5 (Initial commit with website changes)
         <CardItem translateZ="100" className="w-full mt-4">
           <img
             src={image}
@@ -29,3 +37,12 @@ export function ThreeDCardDemo({ name, position, image }) {
     </CardContainer>
   );
 }
+<<<<<<< HEAD
+=======
+
+ThreeDCardDemo.propTypes = {
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+>>>>>>> ec3cdb5 (Initial commit with website changes)

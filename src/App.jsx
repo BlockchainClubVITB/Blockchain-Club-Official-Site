@@ -4,7 +4,11 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+<<<<<<< HEAD
 import React, { lazy } from "react";
+=======
+import { lazy } from "react";
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 import {
   About,
   Contact,

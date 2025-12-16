@@ -1,13 +1,22 @@
 import { cn } from "../../utils/cn";
+<<<<<<< HEAD
 import React, {
   createContext,
+=======
+import { MouseEnterContext, useMouseEnter } from "../../hooks/use-mouse-enter";
+import {
+>>>>>>> ec3cdb5 (Initial commit with website changes)
   useState,
   useContext,
   useRef,
   useEffect,
 } from "react";
+<<<<<<< HEAD
 
 const MouseEnterContext = createContext(undefined);
+=======
+import PropTypes from 'prop-types';
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 
 export const CardContainer = ({
   children,
@@ -26,12 +35,20 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
+<<<<<<< HEAD
   const handleMouseEnter = (e) => {
+=======
+  const handleMouseEnter = () => {
+>>>>>>> ec3cdb5 (Initial commit with website changes)
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
+<<<<<<< HEAD
   const handleMouseLeave = (e) => {
+=======
+  const handleMouseLeave = () => {
+>>>>>>> ec3cdb5 (Initial commit with website changes)
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -62,6 +79,15 @@ export const CardContainer = ({
   );
 };
 
+<<<<<<< HEAD
+=======
+CardContainer.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  containerClassName: PropTypes.string,
+};
+
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 export const CardBody = ({
   children,
   className
@@ -77,6 +103,14 @@ export const CardBody = ({
   );
 };
 
+<<<<<<< HEAD
+=======
+CardBody.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 export const CardItem = ({
   as: Tag = "div",
   children,
@@ -93,6 +127,7 @@ export const CardItem = ({
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
+<<<<<<< HEAD
     handleAnimations();
   }, [isMouseEntered]);
 
@@ -104,6 +139,18 @@ export const CardItem = ({
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
   };
+=======
+    const handleAnimations = () => {
+      if (!ref.current) return;
+      if (isMouseEntered) {
+        ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+      } else {
+        ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+      }
+    };
+    handleAnimations();
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 
   return (
     <Tag
@@ -115,6 +162,7 @@ export const CardItem = ({
   );
 };
 
+<<<<<<< HEAD
 // Create a hook to use the context
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
@@ -122,4 +170,16 @@ export const useMouseEnter = () => {
     throw new Error("useMouseEnter must be used within a MouseEnterProvider");
   }
   return context;
+=======
+CardItem.propTypes = {
+  as: PropTypes.elementType,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  translateX: PropTypes.number,
+  translateY: PropTypes.number,
+  translateZ: PropTypes.number,
+  rotateX: PropTypes.number,
+  rotateY: PropTypes.number,
+  rotateZ: PropTypes.number,
+>>>>>>> ec3cdb5 (Initial commit with website changes)
 };
