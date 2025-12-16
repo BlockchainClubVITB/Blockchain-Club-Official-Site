@@ -28,13 +28,8 @@ function BlogHome() {
         <Swiper
           spaceBetween={30}
           style={{
-<<<<<<< HEAD
-            "--swiper-navigation-color": "#FFA500",
-            "--swiper-pagination-color": "#FFA500",
-=======
             "--swiper-navigation-color": "#f7921a",
             "--swiper-pagination-color": "#f7921a",
->>>>>>> ec3cdb5 (Initial commit with website changes)
           }}
           centeredSlides={true}
           autoplay={{
@@ -49,11 +44,7 @@ function BlogHome() {
         >
           {latestBlog.map((blog) => (
             <div className="m-3 p-3" key={blog.id}>
-<<<<<<< HEAD
-              <SwiperSlide className="bg-orange-400" key={blog.id}>
-=======
               <SwiperSlide className="bg-accent" key={blog.id}>
->>>>>>> ec3cdb5 (Initial commit with website changes)
                 <NavLink to={`/blog/${blog.id}`}>
                   <div
                     className="flex flex-col"
@@ -87,11 +78,7 @@ function BlogHome() {
         </Swiper>
       </div>
       <div className="m-8 p-8">
-<<<<<<< HEAD
-        <div className="p-4 my-4 text-3xl md:text-5xl text-orange-500 text-center">
-=======
         <div className="p-4 my-4 text-3xl md:text-5xl text-accent text-center">
->>>>>>> ec3cdb5 (Initial commit with website changes)
           Hot Articles :
           <hr className="border-white mb-4 mx-auto w-1/2 mt-6" />
         </div>
@@ -113,11 +100,7 @@ function BlogHome() {
                 <div className="text-sm md:text-md text-white px-0.5 pb-1">
                   {blog.subtitle}
                 </div>
-<<<<<<< HEAD
-                <div className="px-0.5 text-orange-500">
-=======
                 <div className="px-0.5 text-accent">
->>>>>>> ec3cdb5 (Initial commit with website changes)
                   <div className="flex md:text-xl justify-between">
                     <div className="">{blog.date} ,&nbsp;</div>
                     <div className="">{blog.readTime}</div>
@@ -125,11 +108,7 @@ function BlogHome() {
                 </div>
               </div>
               <NavLink to={`/blog/${blog.id}`}>
-<<<<<<< HEAD
-                <span className="text-white hover:text-orange-500 mx-2">
-=======
                 <span className="text-white hover:text-accent mx-2">
->>>>>>> ec3cdb5 (Initial commit with website changes)
                   Read More...
                 </span>
               </NavLink>

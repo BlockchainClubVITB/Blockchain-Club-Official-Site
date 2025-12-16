@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { SponsorCard } from "./SponsorCard";
-import accelchainLogo from "../../assets/Sponsors/accelchain-logo-removebg-preview.png";
-
-
-const Sponsors = () => {
-  // Sponsor Data
-  const sponsors = [
-    { id: 1, name: "Notion", logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-    { id: 2, name: "PW Skills", logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHL06fJvV9ZcA/company-logo_200_200/company-logo_200_200/0/1699112299202/pw_skills_official_logo?e=1748476800&v=beta&t=A3i37pQ04ohQgmhyXF-yAV186m6M4YK8ClTYyiwdTXU" },
-=======
 import { SponsorCard } from "./SponsorCard";
 import accelchainLogo from "../../assets/Sponsors/accelchain-logo-removebg-preview.png";
 import PropTypes from 'prop-types';
@@ -24,7 +12,6 @@ const Sponsors = () => {
   const sponsors = [
     { id: 1, name: "Notion", logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
     { id: 2, name: "PW Skills", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbPsqWjwEnrezAerXg5Okq-dYCtFgvW5K0xA&s" },
->>>>>>> ec3cdb5 (Initial commit with website changes)
     { id: 3, name: "Accelchain", logo: accelchainLogo },
     { id: 4, name: "InterviewBuddy", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxT6W2J3-40UX9t2ELVsd2lBlaVIsMk63iKQ&s", url: "https://www.interviewbuddy.net/" },
     { id: 5, name: "SYBGEN", logo: "https://sdn.signalhire.co/storage/company/5d92/0d2b/8015/aec7/d1db/fbe5/7a31/39e1.webp", url: "https://sybgen.com/" },
@@ -33,16 +20,6 @@ const Sponsors = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-black text-white pt-16 pb-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-lg md:text-7xl font-normal text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 mb-6">
-          OUR SPONSORS
-        </h1>
-
-        <p className="text-center text-xl mb-8">
-          We thank our partners for supporting the Blockchain Club's initiatives.
-=======
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
@@ -57,7 +34,6 @@ const Sponsors = () => {
 
         <p className="text-center text-xl mb-8">
           We thank our partners for supporting the Blockchain Club&apos;s initiatives.
->>>>>>> ec3cdb5 (Initial commit with website changes)
         </p>
 
         {/* First Row - 4 sponsors per row on Desktop, 1 per row on Mobile */}
@@ -74,11 +50,7 @@ const Sponsors = () => {
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
     </motion.div>
->>>>>>> ec3cdb5 (Initial commit with website changes)
   );
 };
 
@@ -95,8 +67,6 @@ const SponsorWrapper = ({ sponsor }) => {
   );
 };
 
-<<<<<<< HEAD
-=======
 SponsorWrapper.propTypes = {
   sponsor: PropTypes.shape({
     url: PropTypes.string.isRequired,
@@ -105,5 +75,4 @@ SponsorWrapper.propTypes = {
   }).isRequired,
 };
 
->>>>>>> ec3cdb5 (Initial commit with website changes)
 export default Sponsors;
