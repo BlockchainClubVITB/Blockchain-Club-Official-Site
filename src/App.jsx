@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import React, { lazy } from "react";
+import { lazy } from "react";
 import {
   About,
   Contact,

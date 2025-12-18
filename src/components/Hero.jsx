@@ -1,6 +1,6 @@
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import Lottie from "react-lottie";
 import { TypewriterEffectSmoothDemo } from "./HeroTypewriter";
@@ -15,11 +15,9 @@ import { GoogleGeminiEffectDemo } from "./google-gemini-effect";
 import { BackgroundBeamsDemo } from "./BackgroundBeams";
 import { CardHoverEffectDemo } from "./CardHoverEffect";
 import { PastEventsCards } from "./PastEvents";
-import eventImg from "../assets/Posters/CryptoCarnival.jpg";
-import { AnimatePresence } from "framer-motion";
 import Sponsors from "./sponsors/Sponsors";
 
-const COLORS_TOP = ["#FFA500", "#FF0000", "#E34234"];
+const COLORS_TOP = ["#1a202c", "#800080", "#1a202c"];
 
 const Hero = () => {
   const color = useMotionValue(COLORS_TOP[0]);
@@ -46,12 +44,6 @@ const Hero = () => {
     },
   };
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <>
       {/* <AnimatePresence>
@@ -60,7 +52,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 "
+            className="fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center bg-neutral-900 bg-opacity-50 "
           >
             <div className="relative bg-white rounded-lg p-6">
               <button onClick={closeModal} className="absolute top-2 right-2">
@@ -74,24 +66,24 @@ const Hero = () => {
         )}
       </AnimatePresence> */}
       <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
         style={{
           backgroundImage,
         }}
         className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
       >
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full md:w-[1182px] mx-auto space-y-4">
-          <div className="w-full">
-            <TypewriterEffectSmoothDemo />
-            <p className="my-6 max-w-full md:mx-20 text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-              Empowering Innovators: Unleashing the Potential of Blockchain
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full md:w-[1182px] mx-auto space-y-4 md:space-y-0 md:space-x-8">
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <TypewriterEffectSmoothDemo className="font-poppins" />
+            <p className="my-6 max-w-2xl mx-auto text-center font-poppins text-base leading-relaxed md:text-lg md:leading-relaxed">
+              Learn • Build • Innovate in Web3
             </p>
             <motion.button
               style={{
                 border,
                 boxShadow,
-              }}
-              whileHover={{
-                scale: 1.015,
               }}
               whileTap={{
                 scale: 0.985,
@@ -99,13 +91,13 @@ const Hero = () => {
               onClick={() => {
                 window.open("https://dub.sh/blockchain-club", "_blank");
               }}
-              className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 mx-auto"
+              className="group relative flex w-fit items-center gap-1.5 rounded-full bg-accent px-8 py-4 md:px-6 md:py-3 font-semibold text-white shadow-lg transition-colors hover:bg-accent/80 mx-auto"
             >
               Join Us!
               <ArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
             </motion.button>
           </div>
-          <div>
+          <div className="w-full md:w-2/5 flex justify-center items-center">
             <Lottie
               options={BitcoinAnimationOptions}
               height={400}
