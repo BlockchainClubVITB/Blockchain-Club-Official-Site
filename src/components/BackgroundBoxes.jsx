@@ -1,5 +1,6 @@
 import { Boxes } from "./ui/background-boxes.tsx";
 import { cn } from "../utils/cn.ts";
+import PropTypes from 'prop-types';
 
 export function BackgroundBoxesDemo({ heading, subheading }) {
   return (
@@ -16,3 +17,8 @@ export function BackgroundBoxesDemo({ heading, subheading }) {
     </div>
   );
 }
+
+BackgroundBoxesDemo.propTypes = {
+  heading: PropTypes.string.isRequired,
+  subheading: PropTypes.string.isRequired,
+};

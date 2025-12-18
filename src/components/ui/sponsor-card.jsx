@@ -1,13 +1,12 @@
 import { cn } from "../../utils/cn";
-import React, {
-  createContext,
+import { MouseEnterContext, useMouseEnter } from "../../hooks/use-mouse-enter";
+import {
   useState,
   useContext,
   useRef,
   useEffect,
 } from "react";
-
-const MouseEnterContext = createContext(undefined);
+import PropTypes from 'prop-types';
 
 export const CardContainer = ({
   children,
@@ -26,12 +25,12 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = () => {
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -62,6 +61,12 @@ export const CardContainer = ({
   );
 };
 
+CardContainer.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  containerClassName: PropTypes.string,
+};
+
 export const CardBody = ({
   children,
   className
@@ -75,6 +80,11 @@ export const CardBody = ({
       {children}
     </div>
   );
+};
+
+CardBody.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export const CardItem = ({
@@ -93,17 +103,16 @@ export const CardItem = ({
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
+    const handleAnimations = () => {
+      if (!ref.current) return;
+      if (isMouseEntered) {
+        ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+      } else {
+        ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+      }
+    };
     handleAnimations();
-  }, [isMouseEntered]);
-
-  const handleAnimations = () => {
-    if (!ref.current) return;
-    if (isMouseEntered) {
-      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-    } else {
-      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
-    }
-  };
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
 
   return (
     <Tag
@@ -115,11 +124,14 @@ export const CardItem = ({
   );
 };
 
-// Create a hook to use the context
-export const useMouseEnter = () => {
-  const context = useContext(MouseEnterContext);
-  if (context === undefined) {
-    throw new Error("useMouseEnter must be used within a MouseEnterProvider");
-  }
-  return context;
+CardItem.propTypes = {
+  as: PropTypes.elementType,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  translateX: PropTypes.number,
+  translateY: PropTypes.number,
+  translateZ: PropTypes.number,
+  rotateX: PropTypes.number,
+  rotateY: PropTypes.number,
+  rotateZ: PropTypes.number,
 };

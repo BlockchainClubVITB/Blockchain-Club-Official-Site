@@ -1,13 +1,17 @@
-import React from "react";
 import { SponsorCard } from "./SponsorCard";
 import accelchainLogo from "../../assets/Sponsors/accelchain-logo-removebg-preview.png";
-
+import PropTypes from 'prop-types';
+import { motion, useInView } from "framer-motion";
+import React from "react";
 
 const Sponsors = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+
   // Sponsor Data
   const sponsors = [
     { id: 1, name: "Notion", logo: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-    { id: 2, name: "PW Skills", logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHL06fJvV9ZcA/company-logo_200_200/company-logo_200_200/0/1699112299202/pw_skills_official_logo?e=1748476800&v=beta&t=A3i37pQ04ohQgmhyXF-yAV186m6M4YK8ClTYyiwdTXU" },
+    { id: 2, name: "PW Skills", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbPsqWjwEnrezAerXg5Okq-dYCtFgvW5K0xA&s" },
     { id: 3, name: "Accelchain", logo: accelchainLogo },
     { id: 4, name: "InterviewBuddy", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxT6W2J3-40UX9t2ELVsd2lBlaVIsMk63iKQ&s", url: "https://www.interviewbuddy.net/" },
     { id: 5, name: "SYBGEN", logo: "https://sdn.signalhire.co/storage/company/5d92/0d2b/8015/aec7/d1db/fbe5/7a31/39e1.webp", url: "https://sybgen.com/" },
@@ -16,14 +20,20 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white pt-16 pb-20 px-4">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="min-h-screen bg-neutral-900 text-white pt-16 pb-20 px-4"
+    >
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-lg md:text-7xl font-normal text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 mb-6">
+        <h2 className="text-3xl lg:text-5xl font-normal text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 mb-6">
           OUR SPONSORS
-        </h1>
+        </h2>
 
         <p className="text-center text-xl mb-8">
-          We thank our partners for supporting the Blockchain Club's initiatives.
+          We thank our partners for supporting the Blockchain Club&apos;s initiatives.
         </p>
 
         {/* First Row - 4 sponsors per row on Desktop, 1 per row on Mobile */}
@@ -40,7 +50,7 @@ const Sponsors = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -55,6 +65,14 @@ const SponsorWrapper = ({ sponsor }) => {
       </a>
     </div>
   );
+};
+
+SponsorWrapper.propTypes = {
+  sponsor: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Sponsors;
