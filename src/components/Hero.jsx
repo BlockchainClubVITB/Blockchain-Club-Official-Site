@@ -17,7 +17,7 @@ import { CardHoverEffectDemo } from "./CardHoverEffect";
 import { PastEventsCards } from "./PastEvents";
 import Sponsors from "./sponsors/Sponsors";
 
-const COLORS_TOP = ["#1a202c", "#800080", "#1a202c"];
+const COLORS_TOP = ["#1a202c", "#f7921a", "#1a202c"];
 
 const Hero = () => {
   const color = useMotionValue(COLORS_TOP[0]);

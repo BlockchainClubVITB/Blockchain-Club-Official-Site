@@ -13,7 +13,11 @@ const menuItems = [
     to: "/",
   },
   {
-    name: "About",
+    name: "About Club",
+    to: "/about-club",
+  },
+  {
+    name: "Team",
     to: "/about",
   },
   {
@@ -92,7 +96,7 @@ function Navbar() {
                 alt="Club Logo"
                 className={`transition-all duration-700 ${ // Increased duration
                   scrollY > 50 ? "h-[2.5rem]" : "h-[3.5rem]"
-                }`}
+                  }`}
               />
             </span>
           </div>
@@ -108,10 +112,9 @@ function Navbar() {
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>
-                    `relative text-sm font-semibold transition-colors duration-300 ease-in-out flex items-center space-x-2 ${
-                      isActive
-                        ? "text-accent after:scale-x-100 after:origin-bottom-left after:shadow-orange-glow"
-                        : "text-gray-100"
+                    `relative text-sm font-semibold transition-colors duration-300 ease-in-out flex items-center space-x-2 ${isActive
+                      ? "text-accent after:scale-x-100 after:origin-bottom-left after:shadow-orange-glow"
+                      : "text-gray-100"
                     } hover:text-accent hover:after:scale-x-100 hover:after:origin-bottom-left
                     after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-accent after:w-full after:scale-x-0 after:transition-transform after:duration-300 after:ease-out`
                   }
@@ -127,9 +130,8 @@ function Navbar() {
             <img
               src={vitLogo}
               alt="VIT Logo"
-              className={`transition-all duration-700 ${
-                scrollY > 50 ? "h-[2.5rem]" : "h-[3rem]"
-              }`}
+              className={`transition-all duration-700 ${scrollY > 50 ? "h-[2.5rem]" : "h-[3rem]"
+                }`}
             />
           </div>
         )}
@@ -159,10 +161,9 @@ function Navbar() {
                         to={item.to}
                         onClick={toggleMenu} // Close menu on item click
                         className={({ isActive }) =>
-                          `block w-full text-center rounded-md p-4 text-lg font-semibold relative transition-colors duration-300 ease-in-out flex items-center justify-center space-x-2 ${
-                            isActive
-                              ? "text-accent bg-neutral-800 after:scale-x-100 after:origin-bottom-left after:shadow-orange-glow"
-                              : "text-gray-100 hover:bg-neutral-800"
+                          `block w-full text-center rounded-md p-4 text-lg font-semibold relative transition-colors duration-300 ease-in-out flex items-center justify-center space-x-2 ${isActive
+                            ? "text-accent bg-neutral-800 after:scale-x-100 after:origin-bottom-left after:shadow-orange-glow"
+                            : "text-gray-100 hover:bg-neutral-800"
                           } hover:text-accent hover:after:scale-x-100 hover:after:origin-bottom-left
                           after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-accent after:w-full after:scale-x-0 after:transition-transform after:duration-300 after:ease-out`
                         }

@@ -25,7 +25,7 @@ const Sponsors = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="min-h-screen bg-neutral-900 text-white pt-16 pb-20 px-4"
+      className="min-h-screen bg-black text-white pt-16 pb-20 px-4"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl lg:text-5xl font-normal text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 mb-6">
