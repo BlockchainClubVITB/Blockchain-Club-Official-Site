@@ -5,6 +5,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import PropTypes from 'prop-types';
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -52,14 +53,18 @@ export const TiltCard = ({ teamName }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative md:h-[500px] md:w-[450px] h-[300px] w-[250px] rounded-xl bg-gray-800"
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0px 10px 30px rgba(128, 0, 128, 0.7)", // Purple glow
+      }}
+      className="relative md:h-[500px] md:w-[450px] h-[300px] w-[250px] rounded-xl bg-gray-800 shadow-lg"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-orange-500 shadow-lg"
+        className="absolute inset-4 grid place-content-center rounded-xl bg-accent shadow-lg"
       >
         <p
           style={{
@@ -72,4 +77,8 @@ export const TiltCard = ({ teamName }) => {
       </div>
     </motion.div>
   );
+};
+
+TiltCard.propTypes = {
+  teamName: PropTypes.string.isRequired,
 };
