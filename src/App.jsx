@@ -16,15 +16,17 @@ import {
 } from "./components";
 import Layout from "./Layout";
 import "./App.css";
+import AboutUs from "./components/AboutUs";
 import Preloader from "./components/Preloader";
 const Hero = lazy(() => import("./components/Hero"));
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
         <Route path="" element={<Hero />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} /> {/* Old About with team */}
+        <Route path="/about-club" element={<AboutUs />} /> {/* Add this line - New About Us */}
         <Route path="/about/:name" element={<TeamDetails />} />
         <Route exact path="/blog" element={<BlogHome />} />
         <Route path="/blog/:id" element={<BlogPost />} />

@@ -9,7 +9,11 @@ const menuItems = [
     to: "/",
   },
   {
-    name: "About",
+    name: "About Club",
+    to: "/about-club",
+  },
+  {
+    name: "Team",
     to: "/about",
   },
   {
@@ -108,7 +112,7 @@ function Navbar() {
                 alt="Club Logo"
                 className={`transition-all duration-700 ${ // Increased duration
                   scrollY > 50 ? "h-[2.5rem]" : "h-[3.5rem]"
-                }`}
+                  }`}
               />
             </span>
           </div>
@@ -120,8 +124,7 @@ function Navbar() {
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>
-                    `text-sm font-semibold hover:text-orange-500 ${
-                      isActive ? "text-orange-500" : "text-gray-100"
+                    `text-sm font-semibold hover:text-orange-500 ${isActive ? "text-orange-500" : "text-gray-100"
                     }`
                   }
                 >
@@ -138,7 +141,7 @@ function Navbar() {
               alt="VIT Logo"
               className={`transition-all duration-700 ${ // Increased duration
                 scrollY > 50 ? "h-[2.5rem]" : "h-[3rem]"
-              }`}
+                }`}
             />
           </div>
         )}
@@ -168,8 +171,7 @@ function Navbar() {
                         key={item.name}
                         to={item.to}
                         className={({ isActive }) =>
-                          `-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${
-                            isActive ? "text-orange-500" : "text-gray-100"
+                          `-m-3 flex items-center rounded-md p-3 text-sm font-semibold ${isActive ? "text-orange-500" : "text-gray-100"
                           }`
                         }
                       >
