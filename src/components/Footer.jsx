@@ -17,11 +17,11 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "#", color: "hover:text-gray-300" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/blockchain-club-vitb/", color: "hover:text-blue-500" },
-    { icon: <FaYoutube />, url: "#", color: "hover:text-red-500" },
+    { icon: <FaGithub />, url: "https://github.com/BlockchainClubVITB", color: "hover:text-gray-300" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/blockchain-club-vitb/posts/?feedView=all", color: "hover:text-blue-500" },
+    { icon: <FaYoutube />, url: "https://www.youtube.com/@BlockchainClubVITB", color: "hover:text-red-500" },
     { icon: <FaInstagram />, url: "https://www.instagram.com/blockchain.vitb/", color: "hover:text-pink-500" },
-    { icon: <FaWhatsapp />, url: "#", color: "hover:text-green-500" },
+    { icon: <FaWhatsapp />, url: "https://chat.whatsapp.com/KI3mnptIqiR6gTgv0grRJG", color: "hover:text-green-500" },
     { icon: <FaEnvelope />, url: "mailto:blockchainclub@vitbhopal.ac.in", color: "hover:text-orange-500" },
   ];
 
