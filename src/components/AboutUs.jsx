@@ -135,16 +135,16 @@ function AboutUs() {
               <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                 <h4 className="text-xl font-bold mb-4">Join Our Community</h4>
                 <p className="text-gray-300 mb-6">
-                  Whether you're a beginner curious about blockchain or an experienced developer,
-                  there's a place for you in our club. Together, we're building the future of
+                  Whether you&apos;re a beginner curious about blockchain or an experienced developer,
+                  there&apos;s a place for you in our club. Together, we&apos;re building the future of
                   decentralized technology.
                 </p>
                 <div className="space-y-4">
                   <div className="p-4 bg-gray-900 rounded-lg">
-                    <p className="text-orange-400 font-semibold">"Blockchain is not just a technology, it's a revolution."</p>
+                    <p className="text-orange-400 font-semibold">&quot;Blockchain is not just a technology, it&apos;s a revolution.&quot;</p>
                   </div>
                   <div className="p-4 bg-gray-900 rounded-lg">
-                    <p className="text-orange-400 font-semibold">"Join us in shaping the decentralized future."</p>
+                    <p className="text-orange-400 font-semibold">&quot;Join us in shaping the decentralized future.&quot;</p>
                   </div>
                 </div>
               </div>
