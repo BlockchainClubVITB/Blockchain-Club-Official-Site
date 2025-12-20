@@ -1,8 +1,13 @@
 import HemrajSir from "./HemrajSir.png";
-import NikhilSir from "./NikhilSir.png";
-import Agnibha from "./Agnibha.jpg";
-import Aryan from "./Aryan.jpg";
-import Harsh from "./Harsh.jpeg";
-import Omanshi from "./Omanshi.jpg";
+import Soumyak from "./Soumyak.jpeg";
+import Ayushi_New from "./Ayushi_New.jpg";
+import Mrityunjay_New from "./Mrityunjay_New.jpg";
+import Aana from "./Aana.jpeg";
 
-export { HemrajSir, NikhilSir, Agnibha, Aryan, Harsh, Omanshi };
+export { 
+  HemrajSir, 
+  Soumyak, 
+  Ayushi_New, 
+  Mrityunjay_New, 
+  Aana 
+};

@@ -24,27 +24,41 @@ function Teams() {
   };
 
   return (
-    <div>
-      <h1 className="text-lg md:text-5xl font-normal  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300 my-6">
-        OUR TEAMS
-      </h1>
-      <div className="flex items-center justify-center w-full">
+    <div className="pb-20">
+      <div className="flex items-center justify-center w-full gap-4 md:gap-12">
         <button
           onClick={handlePrev}
-          className="z-10 p-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 focus:outline-none mr-4"
+          className="group relative z-10 p-4 rounded-xl bg-zinc-900 border border-amber-500/20 text-amber-500/40 hover:text-orange-500 hover:border-orange-500/50 transition-all duration-500 shadow-xl overflow-hidden"
         >
-          <ChevronLeft size={24} />
+          <div className="absolute inset-0 bg-orange-500/0 group-hover:bg-orange-500/5 transition-colors" />
+          <ChevronLeft size={28} className="relative z-10 group-hover:-translate-x-1 transition-transform" />
         </button>
+
         {teams.length > 0 && (
-          <NavLink to={`/about/${teams[currentIndex].name}`} key={teams[currentIndex].id}>
-            <TiltCard teamName={teams[currentIndex].name} />
-          </NavLink>
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-orange-500/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <NavLink to={`/about/${teams[currentIndex].name}`} key={teams[currentIndex].id}>
+              <TiltCard teamName={teams[currentIndex].name} />
+            </NavLink>
+            
+            {/* Pagination Indicator */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-2">
+              {teams.map((_, i) => (
+                <div 
+                  key={i} 
+                  className={`h-1 transition-all duration-500 rounded-full ${i === currentIndex ? 'w-8 bg-orange-500' : 'w-2 bg-zinc-800'}`} 
+                />
+              ))}
+            </div>
+          </div>
         )}
+
         <button
           onClick={handleNext}
-          className="z-10 p-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 focus:outline-none ml-4"
+          className="group relative z-10 p-4 rounded-xl bg-zinc-900 border border-amber-500/20 text-amber-500/40 hover:text-orange-500 hover:border-orange-500/50 transition-all duration-500 shadow-xl overflow-hidden"
         >
-          <ChevronRight size={24} />
+          <div className="absolute inset-0 bg-orange-500/0 group-hover:bg-orange-500/5 transition-colors" />
+          <ChevronRight size={28} className="relative z-10 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
     </div>
