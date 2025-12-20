@@ -11,9 +11,6 @@ import {
 import Teams from "./Team/Teams";
 import { motion } from "framer-motion";
 
-// Techy Golden Placeholder SVG
-const placeholderImage = `data:image/svg+xml,%3Csvg width='400' height='500' viewBox='0 0 400 500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='black'/%3E%3Cpath d='M200 150c44.183 0 80 35.817 80 80s-35.817 80-80 80-80-35.817-80-80 35.817-80 80-80zm0 180c66.274 0 120 53.726 120 120v20H80v-20c0-66.274 53.726-120 120-120z' fill='%23f59e0b' fill-opacity='0.2'/%3E%3Cpath d='M30 30l340 440M370 30L30 470' stroke='%23f59e0b' stroke-width='1' stroke-opacity='0.1'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='14' fill='%23f59e0b' fill-opacity='0.5' letter-spacing='4'%3EPHOTO_PENDING%3C/text%3E%3Crect x='20' y='20' width='360' height='460' fill='none' stroke='%23f59e0b' stroke-width='1' stroke-opacity='0.2'/%3E%3C/svg%3E`;
-
 const users = [
   {
     name: "Mrityunjay Singh",

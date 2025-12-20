@@ -29,7 +29,6 @@ import {
   Amir,
   Yash,
   Sparsh,
-  Ayushi,
   Harshit,
   Pragati,
   Ojasva,

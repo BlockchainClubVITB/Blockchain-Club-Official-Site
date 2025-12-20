@@ -106,4 +106,5 @@ ThreeDCardDemo.propTypes = {
   position: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   isTop: PropTypes.bool,
+  objectPosition: PropTypes.string,
 };

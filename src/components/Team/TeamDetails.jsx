@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import TeamData from "./TeamData";
+import PropTypes from 'prop-types';
 
 function TeamDetails() {
   const [team, setTeam] = useState(null);
@@ -148,5 +149,15 @@ function MemberCard({ member, isLead }) {
     </motion.div>
   );
 }
+
+MemberCard.propTypes = {
+  member: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    objectPosition: PropTypes.string,
+  }).isRequired,
+  isLead: PropTypes.bool.isRequired,
+};
 
 export default TeamDetails;

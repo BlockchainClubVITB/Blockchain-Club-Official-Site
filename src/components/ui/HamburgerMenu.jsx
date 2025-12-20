@@ -1,42 +1,34 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-const Path = (props) => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="hsl(0, 0%, 100%)"
-    strokeLinecap="round"
-    {...props}
-  />
-);
+export const HamburgerMenu = ({ toggle, isOpen }) => {
+  return (
+    <button
+      onClick={toggle}
+      className="relative z-50 w-10 h-10 flex flex-col items-center justify-center focus:outline-none"
+    >
+      <div className="w-6 h-5 flex flex-col justify-between items-center relative">
+        <motion.span
+          animate={isOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="w-full h-0.5 bg-white rounded-full block origin-center"
+        />
+        <motion.span
+          animate={isOpen ? { opacity: 0, x: -20 } : { opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          className="w-full h-0.5 bg-white rounded-full block"
+        />
+        <motion.span
+          animate={isOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="w-full h-0.5 bg-white rounded-full block origin-center"
+        />
+      </div>
+    </button>
+  );
+};
 
-export const HamburgerMenu = ({ toggle, isOpen }) => (
-  <button onClick={toggle} className="flex flex-col justify-around w-6 h-6 bg-transparent border-none cursor-pointer p-0 focus:outline-none">
-    <svg width="23" height="23" viewBox="0 0 23 23">
-      <Path
-        variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" },
-        }}
-        animate={isOpen ? "open" : "closed"}
-      />
-      <Path
-        d="M 2 9.423 L 20 9.423"
-        variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 },
-        }}
-        animate={isOpen ? "open" : "closed"}
-        transition={{ duration: 0.1 }}
-      />
-      <Path
-        variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" },
-        }}
-        animate={isOpen ? "open" : "closed"}
-      />
-    </svg>
-  </button>
-);
+HamburgerMenu.propTypes = {
+  toggle: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+};

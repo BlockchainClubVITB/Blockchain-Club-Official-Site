@@ -1,9 +1,9 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 
 export const StarsBackground = () => {
   const stars = useMemo(() => {
-    return Array.from({ length: 10 }).map((_, i) => ({
+    return Array.from({ length: 1 }).map((_, i) => ({
       id: i,
       size: Math.random() * 1.5 + 0.5,
       top: `${Math.random() * 100}%`,

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import TeamData from "./TeamData";
 import { TiltCard } from "./TiltCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -37,9 +37,9 @@ function Teams() {
         {teams.length > 0 && (
           <div className="relative group">
             <div className="absolute -inset-4 bg-orange-500/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <NavLink to={`/about/${teams[currentIndex].name}`} key={teams[currentIndex].id}>
+            <Link to={`/about/${teams[currentIndex].name}`} key={teams[currentIndex].id}>
               <TiltCard teamName={teams[currentIndex].name} />
-            </NavLink>
+            </Link>
             
             {/* Pagination Indicator */}
             <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-2">
