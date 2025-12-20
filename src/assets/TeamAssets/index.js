@@ -17,10 +17,10 @@ import Shanvika from "./Design/Shanvika.jpg";
 import Kritika from "./Design/Kritika.jpg";
 import Tavishi from "./Design/Tavishi.jpeg";
 import Riddhi from "./Design/Riddhi.jpeg";
+import Lakshya from "./Design/Lakshya.jpeg";
 
 // Event Team
 import Anant from "./Event/Anant_New.jpg";
-import Lakshya from "./Event/Lakshya.png";
 import AyushTiwari from "./Event/AyushTiwari.png";
 import Amritanshu from "./Event/Amritanshu.jpg";
 import Akshat from "./Event/Akshat.jpg";
