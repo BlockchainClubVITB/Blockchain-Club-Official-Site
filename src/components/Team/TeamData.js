@@ -124,7 +124,7 @@ const TeamData = () => [
       { name: "Rishabh Jhang", position: "Co-lead", image: Rishabh },
       { name: "Harshit Jaiswal", position: "Core Member", image: Harshit },
       { name: "Ojasva Pandey", position: "Core Member", image: Ojasva },
-      { name: "Siddhant Ghosh", position: "Core Member", image: Siddhant },
+      { name: "Siddhant Goshal", position: "Core Member", image: Siddhant },
       { name: "Ishant Gupta", position: "Core Member", image: placeholderImage },
     ],
   },
