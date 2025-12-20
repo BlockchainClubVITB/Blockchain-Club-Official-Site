@@ -127,6 +127,7 @@ function MemberCard({ member, isLead }) {
           src={member.image}
           alt={member.name}
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
+          style={{ objectPosition: member.objectPosition || "center" }}
         />
       </div>
       

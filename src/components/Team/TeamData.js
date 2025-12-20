@@ -94,7 +94,7 @@ const TeamData = () => [
     name: "Event Team",
     members: [
       { name: "Anant Yadav", position: "Lead", image: Anant },
-      { name: "Ayush Tiwari", position: "Co-lead", image: AyushTiwari },
+      { name: "Ayush Tiwari", position: "Co-lead", image: AyushTiwari, objectPosition: "top" },
       { name: "Harsh Raj", position: "Core Member", image: Harsh },
       { name: "Akshat Raj", position: "Core Member", image: Akshat },
       { name: "Shaion Dutta", position: "Core Member", image: placeholderImage },

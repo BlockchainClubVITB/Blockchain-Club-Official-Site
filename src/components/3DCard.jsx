@@ -1,7 +1,7 @@
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card.tsx";
 import PropTypes from 'prop-types';
 
-export function ThreeDCardDemo({ name, position, image, isTop = false }) {
+export function ThreeDCardDemo({ name, position, image, isTop = false, objectPosition = "center" }) {
   return (
     <CardContainer 
       className="inter-var" 
@@ -39,6 +39,7 @@ export function ThreeDCardDemo({ name, position, image, isTop = false }) {
           <img
             src={image}
             className="h-full w-full object-cover grayscale-[0.3] group-hover/card:grayscale-0 group-hover/card:scale-110 transition-all duration-1000 ease-out"
+            style={{ objectPosition }}
             alt={name}
             loading="lazy"
             decoding="async"
