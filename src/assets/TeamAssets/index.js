@@ -29,12 +29,14 @@ import Harsh from "./Event/Harsh.jpg";
 import Preethi from "./Event/Preethi.jpg";
 import Anushka from "./Event/Anushka.jpeg";
 import Gnana from "./Event/Gnana.jpg";
+import Shaion from "./Event/shaion.jpg";
 
 // Media Team
 import Anshika from "./Media/Anshika_New.jpg";
 import Amir from "./Media/Amir.png";
 import Yash from "./Media/Yash.jpg";
 import Sparsh from "./Media/Sparsh.png";
+import Issac from "./Media/issac.jpeg";
 
 // PR Team
 import Ayushi from "./PR/Ayushi.png";
@@ -96,10 +98,12 @@ export {
   Preethi,
   Anushka,
   Gnana,
+  Shaion,
   Anshika,
   Amir,
   Yash,
   Sparsh,
+  Issac,
   Ayushi,
   Harshit,
   Pragati,
