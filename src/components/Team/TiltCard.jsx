@@ -55,26 +55,53 @@ export const TiltCard = ({ teamName }) => {
       }}
       whileHover={{
         scale: 1.05,
-        boxShadow: "0px 10px 30px rgba(128, 0, 128, 0.7)", // Purple glow
       }}
-      className="relative md:h-[500px] md:w-[450px] h-[300px] w-[250px] rounded-xl bg-gray-800 shadow-lg"
+      className="relative md:h-[400px] md:w-[350px] h-[300px] w-[250px] rounded-xl bg-gradient-to-br from-zinc-900 to-black border border-amber-500/20 hover:border-amber-500/60 transition-all duration-700 shadow-2xl overflow-hidden"
     >
+      {/* Golden Technical Grid Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity duration-700 pointer-events-none" 
+           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' fill='none' stroke='%23f59e0b' stroke-width='1'/%3E%3C/svg%3E")`, backgroundSize: '40px 40px' }} 
+      />
+
+      {/* Technical Corner Accents - Golden */}
+      <div className="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-amber-500/30 group-hover:border-amber-500 transition-all duration-500 rounded-tl-xl" />
+      <div className="absolute top-0 right-0 w-10 h-10 border-t-2 border-r-2 border-amber-500/30 group-hover:border-amber-500 transition-all duration-500 rounded-tr-xl" />
+      <div className="absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2 border-amber-500/30 group-hover:border-amber-500 transition-all duration-500 rounded-bl-xl" />
+      <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-amber-500/30 group-hover:border-amber-500 transition-all duration-500 rounded-br-xl" />
+
+      {/* Metadata Text - Amber */}
+      <div className="absolute top-4 left-6 text-[8px] font-mono text-amber-500/40 uppercase tracking-widest">
+        Branch_ID // {teamName.slice(0, 3).toUpperCase()}_0x{Math.random().toString(16).slice(2, 4)}
+      </div>
+
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-accent shadow-lg"
+        className="absolute inset-6 grid place-content-center rounded-lg bg-black/40 border border-amber-500/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] group"
       >
         <p
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-2xl font-bold"
+          className="text-center text-4xl font-black bg-clip-text text-transparent bg-gradient-to-b from-amber-200 via-amber-500 to-amber-800 px-4 tracking-tighter uppercase"
         >
           {teamName}
         </p>
+        
+        <div 
+          style={{ transform: "translateZ(30px)" }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2"
+        >
+          <div className="w-8 h-[1px] bg-amber-500/30" />
+          <div className="text-[9px] font-mono text-amber-500 tracking-[0.2em]">ACCESS_SECURE</div>
+          <div className="w-8 h-[1px] bg-amber-500/30" />
+        </div>
       </div>
+
+      {/* Golden Glow effects */}
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-600/5 blur-[60px] rounded-full pointer-events-none group-hover:bg-amber-600/10 transition-all duration-700" />
     </motion.div>
   );
 };
