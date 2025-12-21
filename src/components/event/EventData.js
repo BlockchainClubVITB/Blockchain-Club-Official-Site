@@ -91,6 +91,14 @@ const EventData = () => [
       `https://res.cloudinary.com/di3ornybo/image/upload/v1742750432/PokeBlock6_t7axxw.jpg?w=800&auto=format&q=${imageQuality}`,
     ],
   },
+  {
+    id: 6,
+    name: "Innovit 2026 Hackathon",
+    date: "26th December 2025",
+    images: [
+      `https://res.cloudinary.com/di3ornybo/image/upload/v1766322565/innovitHackathon1_qvgvwx.jpg?w=800&auto=format&q=${imageQuality}`,
+    ],
+    }
 ];
 
 export default EventData;
