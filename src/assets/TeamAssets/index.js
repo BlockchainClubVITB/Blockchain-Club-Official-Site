@@ -67,6 +67,7 @@ import Warsi from "./Technical/Warsi.jpeg";
 import Vatsal from "./Technical/Vatsal.jpg";
 import SoumyaG from "./Technical/SoumyaG.jpeg";
 import Sameer from "./Technical/Sameer.jpg";
+import Harshv from "./Technical/Harsh.jpeg";
 
 // Anchor Team
 import Vaaruni from "./Anchor/Vaaruni.jpg";
@@ -129,4 +130,5 @@ export {
   SoumyaG,
   Sameer,
   Vaaruni,
+  Harshv,
 };

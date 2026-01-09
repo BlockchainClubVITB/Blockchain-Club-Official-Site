@@ -55,6 +55,7 @@ import {
   SoumyaG,
   Sameer,
   Vaaruni,
+  Harshv,
 } from "../../assets/TeamAssets";
 
 // Techy Golden Placeholder SVG
@@ -152,7 +153,7 @@ const TeamData = () => [
     members: [
       { name: "Dhairya Gothi", position: "Lead", image: Dhairya },
       { name: "Muskan Srivastav", position: "Co-lead", image: Muskan },
-      { name: "Harshvardhan Jajoo", position: "Core Member", image: placeholderImage },
+      { name: "Harshvardhan Jajoo", position: "Core Member", image: Harshv },
       { name: "Soumya Ghosh", position: "Core Member", image: SoumyaG },
       { name: "Saumya Sopan Bari", position: "Core Member", image: Saumya },
       { name: "Vatsal Mahajan", position: "Core Member", image: Vatsal },
