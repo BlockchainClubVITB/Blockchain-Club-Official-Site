@@ -13,6 +13,12 @@ import { motion } from "framer-motion";
 
 const users = [
   {
+    name: "Dr. Hemraj S Lamkuche",
+    image: HemrajSir,
+    position: "Faculty Coordinator",
+    isFaculty: true,
+  },
+  {
     name: "Mrityunjay Singh",
     image: Mrityunjay_New,
     position: "President",
@@ -36,12 +42,6 @@ const users = [
     position: "Financial Head",
     isFaculty: false,
   },
-  {
-    name: "Dr. Hemraj S Lamkuche",
-    image: HemrajSir,
-    position: "Faculty Coordinator",
-    isFaculty: true,
-  },
 ];
 
 const About = () => {
@@ -64,7 +64,7 @@ const About = () => {
         </motion.div>
 
         <div className="flex flex-col gap-10 md:gap-y-16 mb-32 max-w-7xl mx-auto">
-          {/* Row 1: President & Vice President */}
+          {/* Row 1: President & Faculty Coordinator */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-x-20 max-w-4xl mx-auto w-full">
             {users.slice(0, 2).map((user, index) => (
               <ThreeDCardDemo
@@ -77,7 +77,7 @@ const About = () => {
             ))}
           </div>
 
-          {/* Row 2: Others (Chairman, Financial Head, Faculty) */}
+          {/* Row 2:( VP, Chairman, Financial Head) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-x-10 w-full">
             {users.slice(2).map((user, index) => (
               <ThreeDCardDemo
